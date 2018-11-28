@@ -1,0 +1,18 @@
+NOR Flash Data address allocation table
+Total capacity 16M byte
+
+address          size     content
+0x0020 0000   255K byte 480x272_海滩.bin  + 0x3FC00
+0x0023 FC00   255K byte 480x272_树叶.bin
+0x0027 F800   255K byte 480x272_水珠.bin
+
+0x002B F400   755K byte 800x480_海滩.bin  + 0xBB800
+0x0037 AC00   755K byte 800x480_树叶.bin
+0x0043 6400   755K byte 800x480_水珠.bin
+
+0x004F 1C00   the rest of the space filling with 0xFF
+
+0x0100 0000 - 0x004F 1C00  = 0xB0E400 = 11.05M字节剩余
+
+
+MakeNor.bat 批处理文件用于合并这些bin文件为1个整体文件
